@@ -12,14 +12,14 @@ import google from "../assets/images/ic_googlelogo.png";
 import facebook from "../assets/images/ic_fblogo.png";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const history = useHistory()
+  const navigate = useNavigate()
   const handleSignIn=()=>{
-    history.push('/home')
+navigate('home')
   }
 
   const handleShowPassword = () => {
