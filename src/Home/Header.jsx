@@ -6,7 +6,7 @@ import {
   Avatar,
 } from "@mui/material/";
 import IconButton from "@mui/material/IconButton";
-import { Search } from "@mui/icons-material";
+import { MenuOutlined, Search } from "@mui/icons-material";
 import QuestionLogo from "../assets/images/message-question.png";
 import CalendarLogo from "../assets/images/calendar-2.png";
 import NotificationLogo from "../assets/images/notification.png";
@@ -20,10 +20,16 @@ export const Header = () => {
         flexWrap: "wrap",
         gap: "10px",
         justifyContent: "space-between",
-        padding: "24px 0 24px 0",
-        // borderBottom:'1px solid #DBDBDB'
+        padding: "24px 48px 24px 48px",
+        position:'sticky',
+        zIndex:100,
+        width:'95%',
+        margin:'0 auto',
+        top:'0',
+        borderBottom:'1px solid #DBDBDB'
       }}
     >
+      <MenuOutlined sx={{ display: { xs: "block", md: "none" } }} />
       <TextField
         sx={{ width: { xs: "auto", lg: "417px" }, marginRight: "auto" }}
         size="small"

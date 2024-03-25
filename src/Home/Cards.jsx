@@ -8,7 +8,7 @@ import {
   CardContent,
   Avatar,
   AvatarGroup,
-  CardMedia
+  CardMedia,
 } from "@mui/material";
 import {
   Circle,
@@ -16,13 +16,10 @@ import {
   MoreHoriz,
   TextsmsOutlined,
 } from "@mui/icons-material";
-import flower from '../assets/images/flower.jpg'
-import wall from '../assets/images/wall.jpg'
-import vase from '../assets/images/vase.jpg'
-import PlantCareApp from '../assets/images/PlantCareApp.jpg'
-
-
-
+import flower from "../assets/images/flower.jpg";
+import wall from "../assets/images/wall.jpg";
+import vase from "../assets/images/vase.jpg";
+import PlantCareApp from "../assets/images/PlantCareApp.jpg";
 
 const OverallCard = styled(Box)(() => ({
   backgroundColor: "#F5F5F5",
@@ -61,7 +58,7 @@ const SmallCircles = styled(Box)(() => ({
 const CardBox = styled(Card)(() => ({
   display: "flex",
   flexDirection: "column",
-    marginBottom: "20px",
+  marginBottom: "20px",
   background: "#FFFFFF",
   borderRadius: "16px",
 }));
@@ -74,14 +71,13 @@ const StatusBox = styled(Box)(() => ({
 const Low = styled(Box)(() => ({
   backgroundColor: "rgba(223, 168, 116, 0.2)",
   borderRadius: "4px",
-  padding:'4px'
+  padding: "4px",
 }));
 const Completed = styled(Box)(() => ({
   backgroundColor: "rgba(131, 194, 157, 0.2)",
   borderRadius: "4px",
-  padding:'4px'
+  padding: "4px",
 }));
-
 
 const LowTypography = styled(Box)(() => ({
   fontFamily: "Inter",
@@ -141,15 +137,22 @@ const FooterTypography = styled(Typography)(() => ({
 const CommentAndFileBox = styled(Box)(() => ({
   display: "flex",
   gap: "5px",
-  alignItems:'center'
+  alignItems: "center",
 }));
 
 export const Cards = () => {
   return (
-    <Box sx={{ display: "flex",width:'100%',paddingBottom:'20px', flexWrap: "wrap",gap:'15px',justifyContent: {sm:'center',lg:'space-between'}
-     }}>
-
-        {/* 1st overall card */}
+    <Box
+      sx={{
+        display: "flex",
+        width: "100%",
+        paddingBottom: "20px",
+        flexWrap: "wrap",
+        gap: "15px",
+        justifyContent: { sm: "center", lg: "space-between" },
+      }}
+    >
+      {/* 1st overall card */}
       <OverallCard>
         <TitleBox>
           <Circle fontSize="small" sx={{ color: "#5030E5" }} />
@@ -159,7 +162,7 @@ export const Cards = () => {
         <Divider
           sx={{ border: "3px solid #5030E5", margin: "28px 0 28px 0" }}
         />
-            {/* 1st card */}
+        {/* 1st card */}
         <CardBox>
           <CardContent>
             <StatusBox>
@@ -202,7 +205,7 @@ export const Cards = () => {
 
             <CardTitleTypography>Research</CardTitleTypography>
             <CardTextTypography>
-            User research helps you to create an optimal product for users.
+              User research helps you to create an optimal product for users.
             </CardTextTypography>
           </CardContent>
           <CardFooter>
@@ -232,7 +235,8 @@ export const Cards = () => {
 
             <CardTitleTypography>Wireframes</CardTitleTypography>
             <CardTextTypography>
-            Low fidelity wireframes include the most basic content and visuals.
+              Low fidelity wireframes include the most basic content and
+              visuals.
             </CardTextTypography>
           </CardContent>
           <CardFooter>
@@ -263,8 +267,8 @@ export const Cards = () => {
         <Divider
           sx={{ border: "3px solid #FFA500", margin: "28px 0 28px 0" }}
         />
-            {/* 1st card */}
-        <CardBox >
+        {/* 1st card */}
+        <CardBox>
           <CardContent>
             <StatusBox>
               <Low>
@@ -274,7 +278,7 @@ export const Cards = () => {
             </StatusBox>
 
             <CardTitleTypography>Onboarding Illustrations</CardTitleTypography>
-           <CardMedia component='img'  src={flower}/>
+            <CardMedia component="img" src={flower} />
           </CardContent>
           <CardFooter>
             <Box>
@@ -303,9 +307,15 @@ export const Cards = () => {
             </StatusBox>
 
             <CardTitleTypography>Moodboard</CardTitleTypography>
-            <Box  sx={{display:'flex',justifyContent:'space-between',gap:'12px'}}>
-                <CardMedia component="img" src={vase}/>
-                <CardMedia component="img" src={wall}/>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                gap: "12px",
+              }}
+            >
+              <CardMedia component="img" src={vase} />
+              <CardMedia component="img" src={wall} />
             </Box>
           </CardContent>
           <CardFooter>
@@ -322,9 +332,8 @@ export const Cards = () => {
             </CommentAndFileBox>
           </CardFooter>
         </CardBox>
-      
       </OverallCard>
-      
+
       {/* 3rd overall Card */}
       <OverallCard>
         <TitleBox>
@@ -335,8 +344,8 @@ export const Cards = () => {
         <Divider
           sx={{ border: "3px solid #8BC48A", margin: "28px 0 28px 0" }}
         />
-            {/* 1st card */}
-        <CardBox >
+        {/* 1st card */}
+        <CardBox>
           <CardContent>
             <StatusBox>
               <Completed>
@@ -346,7 +355,7 @@ export const Cards = () => {
             </StatusBox>
 
             <CardTitleTypography>Mobile App Design </CardTitleTypography>
-           <CardMedia component='img'  src={PlantCareApp}/>
+            <CardMedia component="img" src={PlantCareApp} />
           </CardContent>
           <CardFooter>
             <Box>
@@ -363,7 +372,6 @@ export const Cards = () => {
           </CardFooter>
         </CardBox>
 
-
         {/* 2nd card */}
         <CardBox>
           <CardContent>
@@ -376,7 +384,7 @@ export const Cards = () => {
 
             <CardTitleTypography>Design System</CardTitleTypography>
             <CardTextTypography>
-            It just needs to adapt the UI from what you did before 
+              It just needs to adapt the UI from what you did before
             </CardTextTypography>
           </CardContent>
           <CardFooter>
@@ -395,9 +403,7 @@ export const Cards = () => {
             </CommentAndFileBox>
           </CardFooter>
         </CardBox>
-      
       </OverallCard>
-      
     </Box>
   );
 };
